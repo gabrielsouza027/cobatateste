@@ -7,8 +7,7 @@ import plotly.express as px
 from cachetools import TTLCache
 import os
 
-# Configuração da página
-st.set_page_config(page_title="Dashboard de Faturamento", layout="wide")
+
 
 # Tentar definir o locale para formatação monetária
 try:
