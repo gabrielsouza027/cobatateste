@@ -103,9 +103,32 @@ def fetch_estoque_data(data_inicial, data_final):
 
 # Função principal
 def main():
-    st.set_page_config(page_title="Análise de Estoque e Vendas", layout="wide")
     st.title("📦 Análise de Estoque e Vendas")
     st.markdown("Análise dos produtos vendidos e estoque disponível.")
+
+    # Estilização do campo de pesquisa (fundo preto)
+    st.markdown("""
+    <style>
+        .stTextInput>div>div>input {
+            border: 2px solid #4CAF50;
+            border-radius: 10px;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #000000; /* Fundo preto */
+            color: #ffffff; /* Texto branco para contraste */
+        }
+        .stTextInput>div>div>input:focus {
+            outline: none;
+            border-color: #4CAF50;
+            background-color: #000000; /* Mantém fundo preto ao focar */
+            color: #ffffff;
+        }
+        .stTextInput>div>div>input::placeholder {
+            color: #A0A0A0; /* Cor do placeholder */
+            opacity: 1;
+        }
+    </style>
+    """, unsafe_allow_html=True)
 
     # Definir as datas de início e fim para os últimos 2 meses
     data_final = datetime.date(2025, 5, 8)  # Última data disponível
