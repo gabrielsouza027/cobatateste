@@ -6,7 +6,7 @@ import plotly.express as px
 from st_aggrid import AgGrid, GridOptionsBuilder, GridUpdateMode
 from supabase import create_client, Client
 
-locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
+
 
 # Initialize Supabase client
 @st.cache_resource
