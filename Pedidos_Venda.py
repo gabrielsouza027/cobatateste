@@ -6,8 +6,7 @@ import requests
 from dotenv import load_dotenv
 import os
 
-# Configuração da página
-st.set_page_config(page_title="Pedidos de Venda", layout="wide")
+
 
 # Carregar variáveis de ambiente
 load_dotenv()
