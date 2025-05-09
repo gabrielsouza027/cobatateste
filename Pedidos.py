@@ -7,15 +7,7 @@ import requests
 from dotenv import load_dotenv
 import os
 
-# Configuração da página
-st.set_page_config(page_title="Relatório de Pedidos", layout="wide")
 
-# Tentar definir o locale para formatação monetária
-try:
-    locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
-except locale.Error:
-    st.warning("Locale 'pt_BR.UTF-8' não disponível. Usando formatação padrão.")
-    locale.setlocale(locale.LC_ALL, '')
 
 # Configuração dos caches (TTL de 180 segundos)
 cache_pcmovendpend = TTLCache(maxsize=1, ttl=180)
